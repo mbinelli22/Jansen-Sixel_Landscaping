@@ -201,7 +201,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712042137337_InitialCreate.cs" />
+    <Compile Include="Migrations\201712042137337_InitialCreate.Designer.cs">
+      <DependentUpon>201712042137337_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712050150151_Customer.cs" />
+    <Compile Include="Migrations\201712050150151_Customer.Designer.cs">
+      <DependentUpon>201712050150151_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712050201175_Employee.cs" />
+    <Compile Include="Migrations\201712050201175_Employee.Designer.cs">
+      <DependentUpon>201712050201175_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712050209247_Appointments.cs" />
+    <Compile Include="Migrations\201712050209247_Appointments.Designer.cs">
+      <DependentUpon>201712050209247_Appointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Appointments.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -278,6 +298,20 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712042137337_InitialCreate.resx">
+      <DependentUpon>201712042137337_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712050150151_Customer.resx">
+      <DependentUpon>201712050150151_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712050201175_Employee.resx">
+      <DependentUpon>201712050201175_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712050209247_Appointments.resx">
+      <DependentUpon>201712050209247_Appointments.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
