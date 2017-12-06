@@ -1,0 +1,42 @@
+﻿@model JansenAndSixel.Models.LandscapeProject
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LandscapeProject</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Users.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Users.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectDiscription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectDiscription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

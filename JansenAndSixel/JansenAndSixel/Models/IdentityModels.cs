@@ -33,5 +33,9 @@ namespace JansenAndSixel.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<JansenAndSixel.Models.LandscapeProject> LandscapeProjects { get; set; }
+
+        public System.Data.Entity.DbSet<JansenAndSixel.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

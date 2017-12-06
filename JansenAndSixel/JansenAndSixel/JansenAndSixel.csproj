@@ -200,6 +200,7 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LandscapeProjectsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -220,12 +221,17 @@
     <Compile Include="Migrations\201712050209247_Appointments.Designer.cs">
       <DependentUpon>201712050209247_Appointments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712060530075_LandscapeProject.cs" />
+    <Compile Include="Migrations\201712060530075_LandscapeProject.Designer.cs">
+      <DependentUpon>201712060530075_LandscapeProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Appointments.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LandscapeProject.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -305,6 +311,11 @@
     <Content Include="Views\Appointments\Details.cshtml" />
     <Content Include="Views\Appointments\Edit.cshtml" />
     <Content Include="Views\Appointments\Index.cshtml" />
+    <Content Include="Views\LandscapeProjects\Create.cshtml" />
+    <Content Include="Views\LandscapeProjects\Delete.cshtml" />
+    <Content Include="Views\LandscapeProjects\Details.cshtml" />
+    <Content Include="Views\LandscapeProjects\Edit.cshtml" />
+    <Content Include="Views\LandscapeProjects\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -329,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712050209247_Appointments.resx">
       <DependentUpon>201712050209247_Appointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712060530075_LandscapeProject.resx">
+      <DependentUpon>201712060530075_LandscapeProject.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
