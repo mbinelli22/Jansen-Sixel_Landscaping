@@ -17,13 +17,48 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                    <a href="@Url.Action("Index", "Home")" class="navbar-brand logo">
+                        <img src="~/Images/Jansen&SixelLogo.png" title="title" alt="additional title" style="height:40px" />
+                    </a>
+
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Landscaping", "Index", "Customers")</li>
+                    @*<div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="collapse" aria-haspopup="true" aria-expanded="true">
+                            Dropdown
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Bed Edging</a></li>
+                            <li><a href="#">Mulching</a></li>
+                            <li><a href="#">Tree and shrib planting and removal</a></li>
+                            <li><a href="#">Tree pruning</a></li>
+                            <li><a href="#">Flower gardens</a></li>
+                            <li><a href="#">Erosion control</a></li>
+                            <li><a href="#">Top soil deliveries</a></li>
+                            <li><a href="#">Power washing</a></li>
+                            <li><a href="#">Gutter cleaning</a></li>
+                            <li><a href="#">Stump gringing</a></li>
+                            <li><a href="#">Lawn installation</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>*@
+
+
+
+                    <li>@Html.ActionLink("Hardscaping", "Index", "Customers")</li>
+                    <li>@Html.ActionLink("Property Maintenance", "Index", "Customers")</li>
+                    <li>@Html.ActionLink("Snow Removal", "Index", "Customers")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

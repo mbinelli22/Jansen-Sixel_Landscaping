@@ -23,6 +23,8 @@ namespace JansenAndSixel.Models
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Appointments> Appointments { get; set; }
+        public DbSet<LandscapeProject> LandscapeProjects { get; set; }
+
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -33,8 +35,6 @@ namespace JansenAndSixel.Models
         {
             return new ApplicationDbContext();
         }
-
-        public System.Data.Entity.DbSet<JansenAndSixel.Models.LandscapeProject> LandscapeProjects { get; set; }
 
         public System.Data.Entity.DbSet<JansenAndSixel.Models.ApplicationUser> ApplicationUsers { get; set; }
     }

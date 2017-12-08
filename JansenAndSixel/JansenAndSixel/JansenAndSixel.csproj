@@ -243,6 +243,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Jansen&amp;SixelLogo.png" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -316,6 +317,11 @@
     <Content Include="Views\LandscapeProjects\Details.cshtml" />
     <Content Include="Views\LandscapeProjects\Edit.cshtml" />
     <Content Include="Views\LandscapeProjects\Index.cshtml" />
+    <Content Include="Views\Customers\MyProfile.cshtml" />
+    <Content Include="Views\Customers\LandscapingPage.cshtml" />
+    <Content Include="Views\Customers\HardscapingPage.cshtml" />
+    <Content Include="Views\Customers\PropertyMaintenance.cshtml" />
+    <Content Include="Views\Customers\SnowRemoval.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

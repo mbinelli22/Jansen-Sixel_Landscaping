@@ -123,5 +123,130 @@ namespace JansenAndSixel.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        public ActionResult MyProfile()
+        {
+            return View();
+        }
+
+        //Landscaping>>>>>>>>>>>>>>>
+
+        public ActionResult LandscapingPage()
+        {
+            return View();
+        }
+
+        public ActionResult BedEdging()
+        {
+            return View();
+        }
+
+        public ActionResult Mulching()
+        {
+            return View();
+        }
+
+        public ActionResult TreeAndShrubPlantingAndRemoval()
+        {
+            return View();
+        }
+        public ActionResult TreePruning()
+        {
+            return View();
+        }
+
+        public ActionResult FlowerGardens()
+        {
+            return View();
+        }
+
+        public ActionResult ErosionControl()
+        {
+            return View();
+        }
+
+        public ActionResult TopSoilDeliveries()
+        {
+            return View();
+        }
+
+        public ActionResult PowerWashing()
+        {
+            return View();
+        }
+
+        public ActionResult GutterCleaning()
+        {
+            return View();
+        }
+
+        public ActionResult StumpGrinding()
+        {
+            return View();
+        }
+
+        public ActionResult LawnInstallation()
+        {
+            return View();
+        }
+
+        //Hardscaping>>>>>>>>>>>>>>>>>>>>>
+
+        public ActionResult HardscapingPage()
+        {
+            return View();
+        }
+
+        public ActionResult Patios()
+        {
+            return View();
+        }
+
+        public ActionResult DecorativeStone()
+        {
+            return View();
+        }
+
+        public ActionResult RockGardens()
+        {
+            return View();
+        }
+
+        public ActionResult Ponds()
+        {
+            return View();
+        }
+
+        public ActionResult WaterwayFeatures()
+        {
+            return View();
+        }
+
+
+        public ActionResult Walls()
+        {
+            return View();
+        }
+
+
+        public ActionResult Walkways()
+        {
+            return View();
+        }
+
+        //Property Maintenance>>>>>>>>>>>>>>>>>>>>
+
+        public ActionResult PropertyMaintenance()
+        {
+            return View();
+        }
+
+        //Snow Removal>>>>>>>>>>>>>>>>
+
+        public ActionResult SnowRemoval()
+        {
+            return View();
+        }
     }
 }
