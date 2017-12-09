@@ -302,11 +302,11 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Edit.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
-    <Content Include="Views\Employees\Create.cshtml" />
-    <Content Include="Views\Employees\Delete.cshtml" />
-    <Content Include="Views\Employees\Details.cshtml" />
-    <Content Include="Views\Employees\Edit.cshtml" />
-    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\LandscapeProjects\Employees\Create.cshtml" />
+    <Content Include="Views\LandscapeProjects\Employees\Delete.cshtml" />
+    <Content Include="Views\LandscapeProjects\Employees\Details.cshtml" />
+    <Content Include="Views\LandscapeProjects\Employees\Edit.cshtml" />
+    <Content Include="Views\LandscapeProjects\Employees\Index.cshtml" />
     <Content Include="Views\Appointments\Create.cshtml" />
     <Content Include="Views\Appointments\Delete.cshtml" />
     <Content Include="Views\Appointments\Details.cshtml" />
@@ -322,6 +322,13 @@
     <Content Include="Views\Customers\HardscapingPage.cshtml" />
     <Content Include="Views\Customers\PropertyMaintenance.cshtml" />
     <Content Include="Views\Customers\SnowRemoval.cshtml" />
+    <Content Include="Views\Customers\Patios.cshtml" />
+    <Content Include="Views\Customers\DecorativeStone.cshtml" />
+    <Content Include="Views\Customers\RockGardens.cshtml" />
+    <Content Include="Views\Customers\Ponds.cshtml" />
+    <Content Include="Views\Customers\WaterwayFeatures.cshtml" />
+    <Content Include="Views\Customers\Walls.cshtml" />
+    <Content Include="Views\Customers\Walkways.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
