@@ -130,6 +130,16 @@ namespace JansenAndSixel.Controllers
             return View();
         }
 
+        public ActionResult PhotoGallary()
+        {
+            return View();
+        }
+
+        public ActionResult CustomProject()
+        {
+            return View();
+        }
+
         //Landscaping>>>>>>>>>>>>>>>
 
         public ActionResult LandscapingPage()

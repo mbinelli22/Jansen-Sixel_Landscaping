@@ -243,7 +243,36 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\22496215_2135592493133019_8891168422666284762_o.jpg" />
+    <Content Include="Images\AnotherPatio.jpg" />
+    <Content Include="Images\Backyard.jpg" />
+    <Content Include="Images\BackYardRemodle.jpg" />
+    <Content Include="Images\BackyardView.jpg" />
+    <Content Include="Images\Bed.jpg" />
+    <Content Include="Images\BedPatio.jpg" />
+    <Content Include="Images\BeforeBackyard.jpg" />
+    <Content Include="Images\BeforePlatnting.jpg" />
+    <Content Include="Images\Culvert.jpg" />
+    <Content Include="Images\FacebookLogo.png" />
+    <Content Include="Images\Firepit.jpg" />
+    <Content Include="Images\Gardin.jpg" />
+    <Content Include="Images\InstagramLogo.png" />
     <Content Include="Images\Jansen&amp;SixelLogo.png" />
+    <Content Include="Images\LittleBed.jpg" />
+    <Content Include="Images\Patio.jpg" />
+    <Content Include="Images\Patio1.jpg" />
+    <Content Include="Images\Patio2.jpg" />
+    <Content Include="Images\Patio3.jpg" />
+    <Content Include="Images\Patio69.jpg" />
+    <Content Include="Images\PatioBed.jpg" />
+    <Content Include="Images\Patio_Fireplace.jpg" />
+    <Content Include="Images\Planting.jpg" />
+    <Content Include="Images\RetainingWall.jpg" />
+    <Content Include="Images\TwitterLogo.png" />
+    <Content Include="Images\Walkway.jpg" />
+    <Content Include="Images\Walkway1.jpg" />
+    <Content Include="Images\Walkway2.jpg" />
+    <Content Include="Images\Walkway_Wall.jpg" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -329,9 +358,12 @@
     <Content Include="Views\Customers\WaterwayFeatures.cshtml" />
     <Content Include="Views\Customers\Walls.cshtml" />
     <Content Include="Views\Customers\Walkways.cshtml" />
+    <Content Include="Views\Customers\PhotoGallary.cshtml" />
+    <Content Include="Views\Customers\CustomProject.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="node_modules\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

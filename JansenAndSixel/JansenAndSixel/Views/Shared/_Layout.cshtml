@@ -19,7 +19,7 @@
                 </button>
 
                     <a href="@Url.Action("Index", "Home")" class="navbar-brand logo">
-                        <img src="~/Images/Jansen&SixelLogo.png" title="J&S_Logo" alt="additional title" style="height:40px" width="70px"/>
+                        <img src="~/Images/Jansen&SixelLogo.png" title="J&S_Logo" alt="additional title" style="height:25px" width="50px"/>
                     </a>
 
 
@@ -57,7 +57,17 @@
                     <li>@Html.ActionLink("Snow Removal", "SnowRemoval", "Customers")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-
+                    <li>
+                        <a href="https://www.facebook.com/Jansen-Sixel-Landscaping-LLC-637165906309026/">
+                        <img src="~/Images/FacebookLogo.png" title="Facebook" alt="additional title" style="height:25px" width="25px" target="_blank"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/JansenSxlLndscp/">
+                        <img src="~/Images/TwitterLogo.png" title="Twitter" alt="additional title" style="height:25px" width="25px" target="_blank"/>
+                        </a>
+                    </li>
+      
 
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -77,3 +87,4 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
