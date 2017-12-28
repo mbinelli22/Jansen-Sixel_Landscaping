@@ -56,7 +56,7 @@ namespace JansenAndSixel.Models
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
-        public string Password { get; set; }
+        public string Password { get; set; } 
 
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
@@ -65,8 +65,8 @@ namespace JansenAndSixel.Models
     public class RegisterViewModel
     {
         
-        [Display(Name = "UserRoles")]
-        public string UserRoles { get; set; }
+        //[Display(Name = "UserRoles")]
+        //public string UserRoles { get; set; }
 
         [Required]
         [EmailAddress]

@@ -3,20 +3,68 @@
     ViewBag.Title = "LandscapingPage";
 }
 
-<h1><center><strong>Landscaping</strong></center></h1>
-<h2>PROFESSIONAL LANDSCAPING SERVICES</h2>
-<h3>Are you fanatic about keeping your lawn in pristine condition, but are just too busy to keep up on it every day? Let our landscaping professionals handle all of your yard's needs. From the most basic job to complete property overhaul we do it all. If you don’t see what you are looking for just ask, we can likely accommodate you.</h3>
-<h2>Landscaping services for you</h2>
-<p>
-    <li>@Html.ActionLink("Bed edging", "BedEdging", "Customers")</li>
-    <li>@Html.ActionLink("Mulching", "Mulching", "Customers")</li>
-    <li>@Html.ActionLink("Tree and shrub planting and removing", "TreeAndShrubPlantingAndRemoval", "Customers")</li>
-    <li>@Html.ActionLink("Tree pruning", "TreePruning", "Customers")</li>
-    <li>@Html.ActionLink("Flower gardens", "FlowerGardens", "Customers")</li>
-    <li>@Html.ActionLink("Erosion control", "ErosionControl", "Customers")</li>
-    <li>@Html.ActionLink("Top soil deliveries", "TopSoilDeliveries", "Customers")</li>
-    <li>@Html.ActionLink("Power washing", "PowerWashing", "Customers")</li>
-    <li>@Html.ActionLink("Gutter cleaning", "GutterCleaning", "Customers")</li>
-    <li>@Html.ActionLink("Stump grinding", "StumpGrinding", "Customers")</li>
-    <li>@Html.ActionLink("Lawn Installation", "LawnInstallation", "Customers")</li>
-</p>
+<div class="jumbotron" style="background-color:lightyellow">
+    <h1>Landscaping</h1>
+    <h2>PROFESSIONAL LANDSCAPING SERVICES</h2>
+    <p class="lead">Are you fanatic about keeping your lawn in pristine condition, but are just too busy to keep up on it every day? Let our landscaping professionals handle all of your yard's needs. From the most basic job to complete property overhaul we do it all. If you don’t see what you are looking for just ask, we can likely accommodate you.</p>
+</div>
+    <div class="row">
+
+        <div class="col-md-4">
+            <h2>Summer Hours</h2>
+            <p>
+                Monday	7:00am - 4:00pm<br />
+                Tuesday	7:00am - 4:00pm<br />
+                Wednesday	7:00am - 4:00pm<br />
+                Thursday	7:00am - 4:00pm<br />
+                Friday	7:00am - 4:00pm<br />
+                Saturday	closed<br />
+                Sunday	closed<br />
+            </p>
+            <h2>Spring/Fall Hours</h2>
+            <p>
+                Monday 7:00am - 4:00pm<br />
+                Tuesday	7:00am - 4:00pm<br />
+                Wednesday	7:00am - 4:00pm<br />
+                Thursday	7:00am - 4:00pm<br />
+                Friday	7:00am - 4:00pm<br />
+                Saturday	closed<br />
+                Sunday	closed<br />
+            </p>
+            <h2>Winter Hours</h2>
+            <p>
+                Monday	24/7<br />
+                Tuesday	24/7<br />
+                Wednesday	24/7<br />
+                Thursday	24/7<br />
+                Friday	24/7<br />
+                Saturday	24/7<br />
+                Sunday	24/7<br />
+            </p>
+        </div>
+
+        <div class="col-md-4">
+            <img src="~/Images/Gardin.jpg" style="height:400px" width="700px" />
+        </div>
+        
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+       <div class="col-md-4">
+           <h2>Landscaping services for you</h2>
+            <p>
+                <li>@Html.ActionLink("Bed edging", "BedEdging", "Customers")</li>
+                <li>@Html.ActionLink("Mulching", "Mulching", "Customers")</li>
+                <li>@Html.ActionLink("Tree and shrub planting and removing", "TreeAndShrubPlantingAndRemoval", "Customers")</li>
+                <li>@Html.ActionLink("Tree pruning", "TreePruning", "Customers")</li>
+                <li>@Html.ActionLink("Flower gardens", "FlowerGardens", "Customers")</li>
+                <li>@Html.ActionLink("Erosion control", "ErosionControl", "Customers")</li>
+                <li>@Html.ActionLink("Top soil deliveries", "TopSoilDeliveries", "Customers")</li>
+                <li>@Html.ActionLink("Power washing", "PowerWashing", "Customers")</li>
+                <li>@Html.ActionLink("Gutter cleaning", "GutterCleaning", "Customers")</li>
+                <li>@Html.ActionLink("Stump grinding", "StumpGrinding", "Customers")</li>
+                <li>@Html.ActionLink("Lawn Installation", "LawnInstallation", "Customers")</li>
+            </p>
+
+
+        </div>
+</div>

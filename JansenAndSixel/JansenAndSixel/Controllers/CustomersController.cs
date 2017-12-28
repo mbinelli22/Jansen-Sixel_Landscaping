@@ -140,6 +140,11 @@ namespace JansenAndSixel.Controllers
             return View();
         }
 
+        public ActionResult FullCalendar()
+        {
+            return View();
+        }
+
         //Landscaping>>>>>>>>>>>>>>>
 
         public ActionResult LandscapingPage()

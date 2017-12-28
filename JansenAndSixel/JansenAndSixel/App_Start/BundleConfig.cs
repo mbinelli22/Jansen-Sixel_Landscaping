@@ -26,6 +26,19 @@ namespace JansenAndSixel
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            //calendar css file
+            bundles.Add(new StyleBundle("~/Content/fullcalendarcss").Include(
+                "~/Content/themes/jquery.ui.all.css",
+                "~/Content/fullcalendar.css"));
+
+            //calendar script file
+            bundles.Add(new ScriptBundle("~/bundles/fullcalendarjs").Include(
+                "~/Scripts/jquery-ui-{version}.min.js",
+                "~/Scripts/moment.min.js",
+                "~/Scripts/fullcalendar.min.js"));
+
+
         }
     }
 }
