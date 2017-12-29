@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AppointmentsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -224,8 +225,13 @@
     <Compile Include="Migrations\201712280329279_photoList.Designer.cs">
       <DependentUpon>201712280329279_photoList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712290020053_appointment.cs" />
+    <Compile Include="Migrations\201712290020053_appointment.Designer.cs">
+      <DependentUpon>201712290020053_appointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DbConnectionContext.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -498,6 +504,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712280329279_photoList.resx">
       <DependentUpon>201712280329279_photoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712290020053_appointment.resx">
+      <DependentUpon>201712290020053_appointment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
