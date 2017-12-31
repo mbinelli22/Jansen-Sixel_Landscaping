@@ -23,17 +23,29 @@ namespace JansenAndSixel.Models
         public string Address { get; set; }
 
         [Required]
+        [Display(Name ="Phone Number")]
+        public string PhoneNumber { get; set; }
+
+        [Required]
         [Display(Name = "Zip Code")]
         public string ZipCode { get; set; }
 
+        [Required, Display(Name = "Your email"), EmailAddress]
+        public string FromEmail { get; set; }
+
         [Required]
+        [Display(Name ="Date of appointment")]
         public string Date { get; set; }
 
         [Required]
+        [Display(Name = "Time of appointment")]
         public string Time { get; set; }
 
         [Required]
         [Display(Name = "Landscape Project Type")]
         public string ProjectType { get; set; }
+
+        [Required]
+        public string Message { get; set; }
     }
 }

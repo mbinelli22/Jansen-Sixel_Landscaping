@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using JansenAndSixel.Models;
+using System.Net.Mail;
+using System.Threading.Tasks;
 
 namespace JansenAndSixel.Controllers
 {

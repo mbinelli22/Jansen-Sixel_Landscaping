@@ -1,74 +1,9 @@
 ﻿@model JansenAndSixel.Models.Appointment
 
-
 @{
-    ViewBag.Title = "FullCalendar";
+    ViewBag.Title = "NewAppointment";
 }
 
-@section scripts{
-    <script type="text/javascript" >
-        $(document).ready(function () {
-            $('#calendar').fullCalendar({
-                theme: true,
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'month, agendaWeek, agendaDay'
-                },
-
-                defaultView: 'agendaDay',
-                editable: true,
-                allDaySlot: false,
-                selectable: true,
-                slotMinutes: 15,
-                events: [
-                    {
-                        title: 'Fertilize: Amanda Estates',
-                        start: '2018-01-15',
-                        end: '2018-1-16'
-                    },
-                {
-                    title: 'Patio: Binellis',
-                    start: '2018-01-08T07:00:00',
-                    end: '2018-01-11'
-                },
-                {
-                    title: 'Bed Mulching: Andersons',
-                    start: '2018-01-17T07:00:00'
-                },
-                {
-                    id: 999,
-                    title: 'Snow Removal: Kwik Trip',
-                    start: '2018-01-18T16:00:00'
-                },
-                {
-                    id: 999,
-                    title: 'Snow Removal: Kwik Trip',
-                    start: '2018-01-25T16:00:00'
-                },
-                {
-                    title: 'Tree Removal: Obamas',
-                    start: '2018-01-29T12:00:00'
-                }
-                ]
-        
-                 
-            });
-        });
-    </script>
-    }
-
-<div class="jumbotron" style="background-color:lightyellow">
-    <h1>Calendar</h1>
-</div>
-
-<div class="row">
-    <div class="col-md-12">
-        <div id="calendar">
-
-        </div>
-    </div>
-</div>
 
 <h2>Sign up for an appointment</h2>
 
@@ -77,8 +12,10 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
         <div class="form-group">
             @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -96,6 +33,14 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.FromEmail, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FromEmail, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FromEmail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
@@ -108,14 +53,6 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ZipCode, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ZipCode, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -144,14 +81,23 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.Message, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Message, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Message)
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Sign up" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

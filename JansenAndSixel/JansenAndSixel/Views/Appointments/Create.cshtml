@@ -4,80 +4,74 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#calendar').fullCalendar({
+                theme: true,
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month, agendaWeek, agendaDay'
+                },
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Appointment</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                defaultView: 'agendaDay',
+                editable: true,
+                allDaySlot: false,
+                selectable: true,
+                slotMinutes: 15,
+                events: [
+                    {
+                        title: 'Fertilize: Amanda Estates',
+                        start: '2018-01-15',
+                        end: '2018-1-16'
+                    },
+                {
+                    title: 'Patio: Binellis',
+                    start: '2018-01-08T07:00:00',
+                    end: '2018-01-11'
+                },
+                {
+                    title: 'Bed Mulching: Andersons',
+                    start: '2018-01-17T07:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Snow Removal: Kwik Trip',
+                    start: '2018-01-18T16:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Snow Removal: Kwik Trip',
+                    start: '2018-01-25T16:00:00'
+                },
+                {
+                    title: 'Tree Removal: Obamas',
+                    start: '2018-01-29T12:00:00'
+                }
+                ]
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ZipCode, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ZipCode, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ZipCode, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Time, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.ProjectType, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ProjectType, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ProjectType, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
+            });
+        });
+    </script>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+
+<div class="jumbotron" style="background-color:lightyellow">
+    <h1>Calendar</h1>
 </div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="calendar">
+
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <h2>Set up an Appointment</h2>
+    <p><a class="btn btn-primary" href="../Home/NewAppointment" target="_blank">Go &raquo;</a></p>
+</div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
