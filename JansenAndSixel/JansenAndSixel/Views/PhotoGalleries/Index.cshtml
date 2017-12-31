@@ -126,3 +126,85 @@
 }
 
 </table>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form class="pad-bottom" data-bind="visible: !signedIn(), submit: signIn">
+                <div class="form-group">
+                    <label for="username">Sign In</label>
+                    <input class="form-control" type="text" name="username" id="username" placeholder="Enter your userame" />
+                </div>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+                <br />
+            </form>
+
+            <div data-bind="visible: signedIn">
+                <p>You are signed in as <strong data-bind="text: username"></strong></p>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div data-bind="visible: notifications().length > 0, foreach: notifications">
+                <div class="summary alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <p data-bind="text: $data"></p>
+                </div>
+            </div>
+
+            <div class="new-post pad-bottom" data-bind="visible: signedIn">
+                <form data-bind="submit: writePost">
+                    <div class="form-group">
+                        <label for="message">Write a new post:</label>
+                        <textarea class="form-control" name="message" id="message" placeholder="New post"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+
+            <ul class="posts list-unstyled" data-bind="foreach: posts">
+                <li>
+                    <p>
+                        <span data-bind="text: username" class="username"></span><br />
+                    </p>
+                    <p>
+                        <span data-bind="text: message"></span>
+                    </p>
+
+                    <p class="no-pad-bottom date-posted">Posted <span data-bind="text: moment(date).calendar()" /></p>
+
+                    <div class="comments" data-bind="visible: $parent.signedIn() || comments().length > 0">
+                        <ul class="list-unstyled" data-bind="foreach: comments, visible: comments().length > 0">
+                            <li>
+
+                                <p>
+                                    <span class="commentor" data-bind="text: username"></span>
+                                    <span data-bind="text: message"></span>
+                                </p>
+                                <p class=" no-pad-bottom date-posted">Posted <span data-bind="text: moment(date).calendar()" /></p>
+                            </li>
+                        </ul>
+
+                        <form class="add-comment" data-bind="visible: $parent.signedIn, submit: addComment">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="comment" placeholder="Add a comment" />
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-default" type="submit">Add Comment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+@section scripts {
+    <script src="~/Scripts/moment.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.0.3.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/knockout-3.1.0.js"></script>
+    <script src="~/Scripts/board.js"></script>
+}
