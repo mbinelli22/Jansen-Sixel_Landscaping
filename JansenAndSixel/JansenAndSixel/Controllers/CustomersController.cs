@@ -130,7 +130,7 @@ namespace JansenAndSixel.Controllers
             return View();
         }
 
-        public ActionResult PhotoGallary()
+        public ActionResult PhotoGallery()
         {
             return View();
         }

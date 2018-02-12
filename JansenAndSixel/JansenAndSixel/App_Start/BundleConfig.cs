@@ -19,6 +19,12 @@ namespace JansenAndSixel
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
+
+
+
+
+                
+
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
@@ -38,7 +44,19 @@ namespace JansenAndSixel
                 "~/Scripts/moment.min.js",
                 "~/Scripts/fullcalendar.min.js"));
 
+            //Justified Gallery css file
+            bundles.Add(new StyleBundle("~/Content/JustifiedGallerycss").Include(
+                "~/Content/justifiedCallendar.css",
+                "~/Content/justifiedGallery.min.css"));
 
+            //Justified Gallery js file
+            bundles.Add(new ScriptBundle("~/bundles/JustifiedGalleryjs").Include(
+                "~/Scripts/justifiedGallery.js"));
+
+            //Justified Gallery jquery file
+            bundles.Add(new ScriptBundle("~/bundles/jquery-justifiedGalleryjs").Include(
+                "~/Scripts/jquery-justifiedGallery.js",
+                "~/Scripts/jquery-justifiedGallery.min.js"));
         }
     }
 }

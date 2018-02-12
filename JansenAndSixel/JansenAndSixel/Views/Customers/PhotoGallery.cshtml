@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "PhotoGallery";
+}
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" href="../Content/justifiedGallery.css" />
+    @*
+    <link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/19EC0E95-27DD-A642-8B97-815796A655D9/abn/main.css">
+    <link rel="stylesheet" href="/Justified-Gallery/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/Justified-Gallery/bower_components/colorbox/example3/colorbox.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/Justified-Gallery/bower_components/swipebox/src/css/swipebox.min.css" media="screen">
+    <link rel="stylesheet" href="/Justified-Gallery/bower_components/justified-gallery/dist/css/justifiedGallery.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/Justified-Gallery/css/font.css">
+    <link rel="stylesheet" href="/Justified-Gallery/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Justified-Gallery/css/syntax.css" type="text/css" media="screen">*@
+    
+
+
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+
+    <h2>PhotoGallery</h2>
+
+    <div id="myGallery" class="justified-gallery" style="height: 543.183px;">
+        <a href="~/Images/BackYardRemodle.jpg" class="jg-entry entry-visible cboxElement" style="width: 191px; height: 137.986px; top:1px; left:1px;">
+            <img alt="Remodeled back yard" src="~/Images/BackYardRemodle.jpg" style="width:191px; height: 138px; margin-left: -95.5px; margin-top: -69px" />
+        </a>
+        <a href="~/Images/Backyard.jpg" class="jg-entry entry-visible cboxElement" style="width: 191px; height: 137.986px; top:1px; left:1px;">
+            <img alt="Backyard" src="~/Images/Backyard.jpg" style="width:191px; height: 138px; margin-left: -95.5px; margin-top: -69px" />
+        </a>
+        <a href="~/Images/AnotherPatio.jpg" class="jg-entry entry-visible cboxElement" style="width: 191px; height: 137.986px; top:1px; left:1px;">
+            <img alt="Patio" src="~/Images/AnotherPatio.jpg" style="width:191px; height: 138px; margin-left: -95.5px; margin-top: -69px" />
+        </a>
+        <a href="~/Images/BackYardRemodle.jpg" class="jg-entry entry-visible cboxElement" style="width: 191px; height: 137.986px; top:1px; left:1px;">
+            <img alt="Backyard" src="~/Images/BackYardRemodle.jpg" style="width:191px; height: 138px; margin-left: -95.5px; margin-top: -69px" />
+        </a>
+        <a href="~/Images/BackyardView.jpg" class="jg-entry entry-visible cboxElement" style="width: 191px; height: 137.986px; top:1px; left:1px;">
+            <img alt="Backyard" src="~/Images/BackyardView.jpg" style="width:191px; height: 138px; margin-left: -95.5px; margin-top: -69px" />
+        </a>
+        <a href="~/Images/Bed.jpg" class="jg-entry entry-visible cboxElement" style="width: 191px; height: 137.986px; top:1px; left:1px;">
+            <img alt="Bed" src="~/Images/Bed.jpg" style="width:191px; height: 138px; margin-left: -95.5px; margin-top: -69px" />
+        </a>
+        <a href="~/Images/BedPatio.jpg" class="jg-entry entry-visible cboxElement" style="width: 191px; height: 137.986px; top:1px; left:1px;">
+            <img alt="Bed Patio" src="~/Images/BedPatio.jpg" style="width:191px; height: 138px; margin-left: -95.5px; margin-top: -69px" />
+        </a>
+        <a href="~/Images/Culvert.jpg" class="jg-entry entry-visible cboxElement" style="width: 191px; height: 137.986px; top:1px; left:1px;">
+            <img alt="Culvert" src="~/Images/Culvert.jpg" style="width:191px; height: 138px; margin-left: -95.5px; margin-top: -69px" />
+        </a>
+    </div>
+    
+ 
+@*<script src="/Justified-Gallery/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/Justified-Gallery/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/Justified-Gallery/bower_components/colorbox/jquery.colorbox-min.js"></script>
+<script src="/Justified-Gallery/bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
+<script src="/Justified-Gallery/bower_components/justified-gallery/dist/js/jquery.justifiedGallery.min.js"></script>
+<script src="js/jquery-justifiedGallery.js"></script>*@
+    <script src="http://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script src="../Scripts/jquery-justifiedGallery.js"></script>
+    <script>
+        $("#myGallery").justifiedGallery({
+            rowHeight: 200,
+            lastRow: 'justify',
+            margins: 5
+        });
+    </script>
+    
+</body>
+
+
+
+
+
+
