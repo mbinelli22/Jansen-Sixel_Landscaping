@@ -1,0 +1,74 @@
+﻿@model JansenAndSixel.Models.CustomProject
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CustomProject</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfProject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfProject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfLandscapeProject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfLandscapeProject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfHardscapeProject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfHardscapeProject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfMaterial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfMaterial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantityOfMaterial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantityOfMaterial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

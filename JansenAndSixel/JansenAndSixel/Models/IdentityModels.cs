@@ -38,6 +38,8 @@ namespace JansenAndSixel.Models
 
         public System.Data.Entity.DbSet<JansenAndSixel.Models.Appointment> Appointments { get; set; }
 
+        public System.Data.Entity.DbSet<JansenAndSixel.Models.CustomProject> CustomProjects { get; set; }
+
         //public System.Data.Entity.DbSet<JansenAndSixel.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }
