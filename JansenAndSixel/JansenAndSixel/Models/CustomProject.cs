@@ -16,7 +16,7 @@ namespace JansenAndSixel.Models
 
         [Required]
         [Display(Name ="Type of Project:")]
-        public bool TypeOfProject { get; set; }
+        public string TypeOfProject { get; set; }
 
         [Display(Name ="Type of Landscaping Project:")]
         public string TypeOfLandscapeProject { get; set; }
@@ -30,7 +30,7 @@ namespace JansenAndSixel.Models
         [Display(Name = "Quantity of Material:")]
         public string QuantityOfMaterial { get; set; }
 
-        [Display(Name ="Location:")]
+        [Display(Name ="Location of Project:")]
         public string Location { get; set; }
 
 

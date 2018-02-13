@@ -46,13 +46,25 @@ namespace JansenAndSixel.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,TypeOfProject,TypeOfLandscapeProject,TypeOfHardscapeProject,TypeOfMaterial,QuantityOfMaterial,Location")] CustomProject customProject)
+        public ActionResult Create([Bind(Include = "Id,Name,TypeOfProject")] CustomProject customProject)
         {
             if (ModelState.IsValid)
             {
                 db.CustomProjects.Add(customProject);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+                var projectType = new CustomProject { TypeOfProject = customProject.TypeOfProject };
+                db.CustomProjects.Add(projectType);
+                db.SaveChanges();
+
+                    if(projectType.TypeOfProject == "Landscape")
+                    {
+                        return RedirectToAction("Create1");
+                    }
+                    else if(projectType.TypeOfProject == "Hardscape")
+                    {
+                        return RedirectToAction("Create2");
+                    }
             }
 
             return View(customProject);

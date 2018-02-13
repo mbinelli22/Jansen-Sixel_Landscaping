@@ -290,6 +290,10 @@
     <Compile Include="Migrations\201802131714410_CustomProject.Designer.cs">
       <DependentUpon>201802131714410_CustomProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802132006045_customProject change bool to string.cs" />
+    <Compile Include="Migrations\201802132006045_customProject change bool to string.Designer.cs">
+      <DependentUpon>201802132006045_customProject change bool to string.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Appointment.cs" />
@@ -553,7 +557,6 @@
     <Content Include="Views\Customers\WaterwayFeatures.cshtml" />
     <Content Include="Views\Customers\Walls.cshtml" />
     <Content Include="Views\Customers\Walkways.cshtml" />
-    <Content Include="Views\Customers\CustomProject.cshtml" />
     <Content Include="Views\Customers\FullCalendar.cshtml" />
     <Content Include="Views\Appointments\Sent.cshtml" />
     <Content Include="Views\Home\NewAppointment.cshtml" />
@@ -606,6 +609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802131714410_CustomProject.resx">
       <DependentUpon>201802131714410_CustomProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802132006045_customProject change bool to string.resx">
+      <DependentUpon>201802132006045_customProject change bool to string.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
