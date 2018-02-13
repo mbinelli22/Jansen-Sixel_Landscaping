@@ -11,24 +11,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <link rel="stylesheet" href="../Content/justifiedGallery.css" />
-    @*
-    <link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/19EC0E95-27DD-A642-8B97-815796A655D9/abn/main.css">
-    <link rel="stylesheet" href="/Justified-Gallery/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="/Justified-Gallery/bower_components/colorbox/example3/colorbox.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="/Justified-Gallery/bower_components/swipebox/src/css/swipebox.min.css" media="screen">
-    <link rel="stylesheet" href="/Justified-Gallery/bower_components/justified-gallery/dist/css/justifiedGallery.css" type="text/css" media="all">
-    <link rel="stylesheet" href="/Justified-Gallery/css/font.css">
-    <link rel="stylesheet" href="/Justified-Gallery/bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/Justified-Gallery/css/syntax.css" type="text/css" media="screen">*@
-    
+
 </head>
 
-
 <body>
+    <div class="jumbotron" style="background-color:lightyellow">
+        <h1>Photo Gallery</h1>
+        <p class="lead">Take a look through photos of our recent landscaping and construction work. We're proud of all the work we do here at Jansen & Sixel Landscaping LLC.</p>
+    </div>
 
-    <h2><center>Photo Gallery</center></h2>
-    <p><center>Take a look through photos of our recent landscaping and construction work. We're proud of all the work we do here at Jansen & Sixel Landscaping LLC.</center></p>
-    <br /><br /><br />
     <div id="myGallery" class="justified-gallery" style="height: 543.183px;">
         <a href="~/Images/BackYardRemodle.jpg" class="jg-entry entry-visible cboxElement" style="width: 191px; height: 137.986px; top:1px; left:1px;">
             <img alt="Remodeled back yard" src="~/Images/BackYardRemodle.jpg" style="width:191px; height: 138px; margin-left: -95.5px; margin-top: -69px" />
@@ -42,7 +33,6 @@
         <a href="~/Images/AnotherPatio.jpg" class="jg-entry entry-visible cboxElement" style="width: 191px; height: 137.986px; top:1px; left:1px;">
             <img alt="Patio" src="~/Images/AnotherPatio.jpg" style="width:191px; height: 138px; margin-left: -95.5px; margin-top: -69px" />
         </a>
-
         <a href="~/Images/BackyardView.jpg" class="jg-entry entry-visible cboxElement" style="width: 191px; height: 137.986px; top:1px; left:1px;">
             <img alt="Backyard" src="~/Images/BackyardView.jpg" style="width:191px; height: 138px; margin-left: -95.5px; margin-top: -69px" />
         </a>
@@ -105,13 +95,6 @@
         </a>
     </div>
     
- 
-@*<script src="/Justified-Gallery/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="/Justified-Gallery/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="/Justified-Gallery/bower_components/colorbox/jquery.colorbox-min.js"></script>
-<script src="/Justified-Gallery/bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
-<script src="/Justified-Gallery/bower_components/justified-gallery/dist/js/jquery.justifiedGallery.min.js"></script>
-<script src="js/jquery-justifiedGallery.js"></script>*@
     <script src="http://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
@@ -119,7 +102,7 @@
     <script>
         $("#myGallery").justifiedGallery({
             rowHeight: 200,
-            lastRow: 'justify',
+            lastRow: 'nojustify',
             margins: 5
         });
     </script>

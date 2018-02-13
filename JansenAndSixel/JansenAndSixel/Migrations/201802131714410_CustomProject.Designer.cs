@@ -7,13 +7,13 @@ namespace JansenAndSixel.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class photoList : IMigrationMetadata
+    public sealed partial class CustomProject : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(photoList));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CustomProject));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712280329279_photoList"; }
+            get { return "201802131714410_CustomProject"; }
         }
         
         string IMigrationMetadata.Source

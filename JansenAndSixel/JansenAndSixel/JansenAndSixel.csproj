@@ -257,14 +257,6 @@
     <Compile Include="Migrations\201712050201175_Employee.Designer.cs">
       <DependentUpon>201712050201175_Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712272229509_PhotoGallery.cs" />
-    <Compile Include="Migrations\201712272229509_PhotoGallery.Designer.cs">
-      <DependentUpon>201712272229509_PhotoGallery.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712280329279_photoList.cs" />
-    <Compile Include="Migrations\201712280329279_photoList.Designer.cs">
-      <DependentUpon>201712280329279_photoList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201712290020053_appointment.cs" />
     <Compile Include="Migrations\201712290020053_appointment.Designer.cs">
       <DependentUpon>201712290020053_appointment.cs</DependentUpon>
@@ -293,11 +285,15 @@
     <Compile Include="Migrations\201712312120375_messageBoard.Designer.cs">
       <DependentUpon>201712312120375_messageBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802131714410_CustomProject.cs" />
+    <Compile Include="Migrations\201802131714410_CustomProject.Designer.cs">
+      <DependentUpon>201802131714410_CustomProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\CustomProject.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\DbConnectionContext.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -581,12 +577,6 @@
     <EmbeddedResource Include="Migrations\201712050201175_Employee.resx">
       <DependentUpon>201712050201175_Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712272229509_PhotoGallery.resx">
-      <DependentUpon>201712272229509_PhotoGallery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712280329279_photoList.resx">
-      <DependentUpon>201712280329279_photoList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712290020053_appointment.resx">
       <DependentUpon>201712290020053_appointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -607,6 +597,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712312120375_messageBoard.resx">
       <DependentUpon>201712312120375_messageBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802131714410_CustomProject.resx">
+      <DependentUpon>201802131714410_CustomProject.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

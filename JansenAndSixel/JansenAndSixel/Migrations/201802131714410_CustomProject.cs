@@ -3,9 +3,14 @@ namespace JansenAndSixel.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class photoList : DbMigration
+    public partial class CustomProject : DbMigration
     {
         public override void Up()
+        {
+            DropTable("dbo.PhotoGalleries");
+        }
+        
+        public override void Down()
         {
             CreateTable(
                 "dbo.PhotoGalleries",
@@ -17,11 +22,6 @@ namespace JansenAndSixel.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
-        }
-        
-        public override void Down()
-        {
-            DropTable("dbo.PhotoGalleries");
         }
     }
 }
