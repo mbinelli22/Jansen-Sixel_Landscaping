@@ -220,8 +220,61 @@ namespace JansenAndSixel.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult CreateHardscapeProject([Bind(Include = "Id, Name, TypeOfHardscapeProject")] CustomProject customProject)
         {
+            if (ModelState.IsValid)
+            {
+                db.CustomProjects.Add(customProject);
+                db.SaveChanges();
+                var hardscapeType = new CustomProject { TypeOfHardscapeProject = customProject.TypeOfHardscapeProject };
+                db.CustomProjects.Add(hardscapeType);
+                db.SaveChanges();
 
+                if(hardscapeType.TypeOfHardscapeProject == "Patio")
+                {
+                    return RedirectToAction("Patio");
+                }
+                else if(hardscapeType.TypeOfHardscapeProject == "Decorative Stone")
+                {
+                    return RedirectToAction("DecorativeStone");
+                }
+                else if (hardscapeType.TypeOfHardscapeProject == "Rock Garden")
+                {
+                    return RedirectToAction("RockGarden");
+                }
+                else if (hardscapeType.TypeOfHardscapeProject == "Ponds")
+                {
+                    return RedirectToAction("Ponds");
+                }
+                else if (hardscapeType.TypeOfHardscapeProject == "Walkway Features")
+                {
+                    return RedirectToAction("WalkwayFeatures");
+                }
+                else if (hardscapeType.TypeOfHardscapeProject == "Walls")
+                {
+                    return RedirectToAction("Walls");
+                }
+                else if (hardscapeType.TypeOfHardscapeProject == "Walkways")
+                {
+                    return RedirectToAction("Walkways");
+                }
+                else
+                {
+                    return CreateHardscapeProject();
+                }
+            }
+            return CreateHardscapeProject();
         }
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
