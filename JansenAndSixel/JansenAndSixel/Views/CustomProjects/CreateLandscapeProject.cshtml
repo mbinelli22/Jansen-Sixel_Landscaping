@@ -1,0 +1,79 @@
+﻿@model JansenAndSixel.Models.CustomProject
+
+@{
+    ViewBag.Title = "CreateLandscapeProject";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="jumbotron" style="background-color:lightyellow">
+        <h1>Custom Project</h1>
+        <p class="lead">Have a project in mind already? Put together all the pieces and let us do the dirty work!</p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Summer Hours</h2>
+        <p>
+            Monday	7:00am - 4:00pm<br />
+            Tuesday	7:00am - 4:00pm<br />
+            Wednesday	7:00am - 4:00pm<br />
+            Thursday	7:00am - 4:00pm<br />
+            Friday	7:00am - 4:00pm<br />
+            Saturday	closed<br />
+            Sunday	closed<br />
+        </p>
+        <h2>Spring/Fall Hours</h2>
+        <p>
+            Monday 7:00am - 4:00pm<br />
+            Tuesday	7:00am - 4:00pm<br />
+            Wednesday	7:00am - 4:00pm<br />
+            Thursday	7:00am - 4:00pm<br />
+            Friday	7:00am - 4:00pm<br />
+            Saturday	closed<br />
+            Sunday	closed<br />
+        </p>
+        <h2>Winter Hours</h2>
+        <p>
+            Monday	24/7<br />
+            Tuesday	24/7<br />
+            Wednesday	24/7<br />
+            Thursday	24/7<br />
+            Friday	24/7<br />
+            Saturday	24/7<br />
+            Sunday	24/7<br />
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-horizontal">
+        <hr />
+
+        <h3>Select the type of landscaping project:</h3>
+        @Html.DropDownListFor(model => model.TypeOfLandscapeProject, new List<SelectListItem>
+            {
+                new SelectListItem {Text="Bed Edging", Value="Bed Edging" },
+                new SelectListItem {Text="Mulching", Value="Mulching" },
+                new SelectListItem {Text="Tree/ Shrub Planting/Removal", Value="Tree/ Shrub Planting/Removal" },
+                new SelectListItem {Text="Tree Pruning", Value="Flower Gardins" },
+                new SelectListItem {Text="Erosion Control", Value="Erosion Control" },
+                new SelectListItem {Text="Top Soil Delivery", Value="Top Soil Delivery" },
+                new SelectListItem {Text="Power Washing", Value="Power Washing" },
+                new SelectListItem {Text="Gutter Cleaning", Value="Gutter Cleaning" },
+                new SelectListItem {Text="Stump Grinding", Value="Stump Grinding" },
+                new SelectListItem {Text="Lawn Installation", Value="Lawn Installation" }
+            }, "Select One")
+
+            <br /><br />
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Next" class="btn btn-default" style="color:cornflowerblue" />
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+}

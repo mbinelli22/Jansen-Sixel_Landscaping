@@ -57,14 +57,14 @@ namespace JansenAndSixel.Controllers
                 db.CustomProjects.Add(projectType);
                 db.SaveChanges();
 
-                    if(projectType.TypeOfProject == "Landscape")
-                    {
-                        return RedirectToAction("Create1");
-                    }
-                    else if(projectType.TypeOfProject == "Hardscape")
-                    {
-                        return RedirectToAction("Create2");
-                    }
+                if (projectType.TypeOfProject == "Landscape")
+                {
+                    return RedirectToAction("CreateLandscapeProject");
+                }
+                else if (projectType.TypeOfProject == "Hardscape")
+                {
+                    return RedirectToAction("CreateHardscapeProject");
+                }
             }
 
             return View(customProject);
@@ -135,5 +135,93 @@ namespace JansenAndSixel.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        //Get Create Landscaping Project
+        public ActionResult CreateLandscapeProject()
+        {
+            return View();
+        }
+
+        //Post Create Landscaping Project
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateLandscapeProject([Bind(Include = "Id, Name, TypeOfLandscapeProject")] CustomProject customProject)
+        {
+            if (ModelState.IsValid)
+            {
+                db.CustomProjects.Add(customProject);
+                db.SaveChanges();
+                var landscapeType = new CustomProject { TypeOfLandscapeProject = customProject.TypeOfLandscapeProject };
+                db.CustomProjects.Add(landscapeType);
+                db.SaveChanges();
+
+                if(landscapeType.TypeOfLandscapeProject == "Bed Edging")
+                {
+                    return RedirectToAction("BedEdging");
+                }
+                else if(landscapeType.TypeOfLandscapeProject == "Mulching")
+                {
+                    return RedirectToAction("Mulching");
+                }
+                else if(landscapeType.TypeOfLandscapeProject == "Tree/ Shrub Planting/Removal")
+                {
+                    return RedirectToAction("TreeShrubPlantingRemoval");
+                }
+                else if(landscapeType.TypeOfLandscapeProject == "Tree Pruning")
+                {
+                    return RedirectToAction("TreePruning");
+                }
+                else if(landscapeType.TypeOfLandscapeProject == "Flower Gardens")
+                {
+                    return RedirectToAction("FlowerGardens");
+                }
+                else if(landscapeType.TypeOfLandscapeProject == "Erosion Control")
+                {
+                    return RedirectToAction("ErosionConrol");
+                }
+                else if(landscapeType.TypeOfLandscapeProject == "Top Soil Delivery")
+                {
+                    return RedirectToAction("TopSoilDelivery");
+                }
+                else if(landscapeType.TypeOfLandscapeProject == "Power Washing")
+                {
+                    return RedirectToAction("PowerWashing");
+                }
+                else if(landscapeType.TypeOfLandscapeProject == "Gutter Cleaning")
+                {
+                    return RedirectToAction("GutterCleaning");
+                }
+                else if(landscapeType.TypeOfLandscapeProject == "Stump Grinding")
+                {
+                    return RedirectToAction("StupmpGrinding");
+                }
+                else if(landscapeType.TypeOfLandscapeProject == "Lawn Installation")
+                {
+                    return RedirectToAction("LawnInstallation");
+                }
+                else
+                {
+                    return CreateLandscapeProject();
+                }
+               
+            }
+            return CreateLandscapeProject();
+        }
+
+        //Get Create Hardscaping Project
+        public ActionResult CreateHardscapeProject()
+        {
+            return View();
+        }
+
+        //Post Create Hardscaping Project
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateHardscapeProject([Bind(Include = "Id, Name, TypeOfHardscapeProject")] CustomProject customProject)
+        {
+
+        }
+
     }
 }

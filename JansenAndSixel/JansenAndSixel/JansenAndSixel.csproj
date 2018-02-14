@@ -567,6 +567,8 @@
     <Content Include="Views\CustomProjects\Details.cshtml" />
     <Content Include="Views\CustomProjects\Edit.cshtml" />
     <Content Include="Views\CustomProjects\Index.cshtml" />
+    <Content Include="Views\CustomProjects\CreateLandscapeProject.cshtml" />
+    <Content Include="Views\CustomProjects\CreateHardscapeProject.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
