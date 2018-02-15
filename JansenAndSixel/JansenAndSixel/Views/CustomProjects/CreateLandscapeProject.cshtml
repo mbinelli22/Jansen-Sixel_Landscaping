@@ -49,8 +49,9 @@
     <div class="col-md-4">
         <div class="form-horizontal">
         <hr />
-
         <h3>Select the type of landscaping project:</h3>
+            @Html.HiddenFor(model => model.Id)
+            @Html.HiddenFor(model => model.Name)
         @Html.DropDownListFor(model => model.TypeOfLandscapeProject, new List<SelectListItem>
             {
                 new SelectListItem {Text="Bed Edging", Value="Bed Edging" },

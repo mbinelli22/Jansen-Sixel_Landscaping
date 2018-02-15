@@ -14,7 +14,7 @@ namespace JansenAndSixel.Models
         [Display(Name ="Your Name:")]
         public string Name { get; set; }
 
-        [Required]
+        
         [Display(Name ="Type of Project:")]
         public string TypeOfProject { get; set; }
 

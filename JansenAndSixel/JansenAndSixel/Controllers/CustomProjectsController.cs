@@ -146,9 +146,9 @@ namespace JansenAndSixel.Controllers
         //Post Create Landscaping Project
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateLandscapeProject([Bind(Include = "Id, Name, TypeOfLandscapeProject")] CustomProject customProject)
+        public ActionResult CreateLandscapeProject([Bind(Include = "TypeOfLandscapeProject")] CustomProject customProject)
         {
-            if (ModelState.IsValid)
+             if (ModelState.IsValid)                                                                                                                        
             {
                 db.CustomProjects.Add(customProject);
                 db.SaveChanges();
@@ -264,7 +264,10 @@ namespace JansenAndSixel.Controllers
             return CreateHardscapeProject();
         }
 
-
+        public ActionResult Mulching()
+        {
+            return View();
+        }
 
 
 

@@ -294,6 +294,10 @@
     <Compile Include="Migrations\201802132006045_customProject change bool to string.Designer.cs">
       <DependentUpon>201802132006045_customProject change bool to string.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802151936132_deletedRequiredField.cs" />
+    <Compile Include="Migrations\201802151936132_deletedRequiredField.Designer.cs">
+      <DependentUpon>201802151936132_deletedRequiredField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Appointment.cs" />
@@ -569,6 +573,7 @@
     <Content Include="Views\CustomProjects\Index.cshtml" />
     <Content Include="Views\CustomProjects\CreateLandscapeProject.cshtml" />
     <Content Include="Views\CustomProjects\CreateHardscapeProject.cshtml" />
+    <Content Include="Views\CustomProjects\Mulching.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -614,6 +619,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802132006045_customProject change bool to string.resx">
       <DependentUpon>201802132006045_customProject change bool to string.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802151936132_deletedRequiredField.resx">
+      <DependentUpon>201802151936132_deletedRequiredField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
