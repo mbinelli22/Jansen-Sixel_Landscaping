@@ -148,7 +148,7 @@ namespace JansenAndSixel.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult CreateLandscapeProject([Bind(Include = "TypeOfLandscapeProject")] CustomProject customProject)
         {
-             if (ModelState.IsValid)                                                                                                                        
+             if (ModelState.IsValid)                                                                                                                    
             {
                 db.CustomProjects.Add(customProject);
                 db.SaveChanges();
@@ -269,6 +269,20 @@ namespace JansenAndSixel.Controllers
             return View();
         }
 
+        public ActionResult TopSoilDelivery()
+        {
+            return View();
+        }
+
+        public ActionResult Patio()
+        {
+            return View();
+        }
+
+        public ActionResult Walls()
+        {
+            return View();
+        }
 
 
 

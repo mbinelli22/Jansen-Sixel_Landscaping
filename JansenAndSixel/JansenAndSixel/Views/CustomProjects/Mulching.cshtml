@@ -1,7 +1,102 @@
-﻿
+﻿@model JansenAndSixel.Models.CustomProject
+
 @{
     ViewBag.Title = "Mulching";
 }
 
-<h2>Mulching</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="jumbotron" style="background-color:lightyellow">
+        <h1>Custom Project</h1>
+        <p class="lead">Have a project in mind already? Put together all the pieces and let us do the dirty work!</p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Summer Hours</h2>
+        <p>
+            Monday	7:00am - 4:00pm<br />
+            Tuesday	7:00am - 4:00pm<br />
+            Wednesday	7:00am - 4:00pm<br />
+            Thursday	7:00am - 4:00pm<br />
+            Friday	7:00am - 4:00pm<br />
+            Saturday	closed<br />
+            Sunday	closed<br />
+        </p>
+        <h2>Spring/Fall Hours</h2>
+        <p>
+            Monday 7:00am - 4:00pm<br />
+            Tuesday	7:00am - 4:00pm<br />
+            Wednesday	7:00am - 4:00pm<br />
+            Thursday	7:00am - 4:00pm<br />
+            Friday	7:00am - 4:00pm<br />
+            Saturday	closed<br />
+            Sunday	closed<br />
+        </p>
+        <h2>Winter Hours</h2>
+        <p>
+            Monday	24/7<br />
+            Tuesday	24/7<br />
+            Wednesday	24/7<br />
+            Thursday	24/7<br />
+            Friday	24/7<br />
+            Saturday	24/7<br />
+            Sunday	24/7<br />
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-horizontal">
+            <hr />
+            <h3>Select the type of mulch you'd like for the project:</h3>
+
+            @Html.DropDownListFor(model => model.TypeOfMaterial, new List<SelectListItem>
+            {
+                new SelectListItem {Text="Cedar Mulch", Value="Cedar Mulch" },
+                new SelectListItem {Text="Cocoa Dyed Bark", Value="Cocoa Dyed Bark" },
+                new SelectListItem {Text="Gold Dyed Mulch", Value="Gold Dyed Mulch" },
+                new SelectListItem {Text="Natural Mulch", Value="Natural Mulch" },
+                new SelectListItem {Text="Playground Chips", Value="Playground Chips" },
+                new SelectListItem {Text="Red Dyed Mulch", Value="Red Dyed Mulch" },
+                new SelectListItem {Text="Black Dyed Mulch", Value="Black Dyed Mulch" },
+                new SelectListItem {Text="Light Brown Dyed Mulch", Value="Light Brown Dyed Mulch" },
+                new SelectListItem {Text="Shredded Bark Mulch", Value="Shredded Bark Mulch" }
+            }, "Select One")
+
+            <h3>Select the amount of mulch you'd like for the project (in yards):</h3>
+            <div class="form-group">
+            @Html.LabelFor(model => model.QuantityOfMaterial, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.QuantityOfMaterial, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.QuantityOfMaterial, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+            <h3>Please give us a brief description of the location where the mulch will be going:</h3>
+            <div class="form-group">
+            @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+            <br /><br />
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Next" class="btn btn-default" style="color:cornflowerblue" />
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
+
+}
+
 

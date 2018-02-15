@@ -1,0 +1,87 @@
+﻿@model JansenAndSixel.Models.CustomProject
+
+@{
+    ViewBag.Title = "Patio";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="jumbotron" style="background-color:lightyellow">
+        <h1>Custom Project</h1>
+        <p class="lead">Have a project in mind already? Put together all the pieces and let us do the dirty work!</p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Summer Hours</h2>
+        <p>
+            Monday	7:00am - 4:00pm<br />
+            Tuesday	7:00am - 4:00pm<br />
+            Wednesday	7:00am - 4:00pm<br />
+            Thursday	7:00am - 4:00pm<br />
+            Friday	7:00am - 4:00pm<br />
+            Saturday	closed<br />
+            Sunday	closed<br />
+        </p>
+        <h2>Spring/Fall Hours</h2>
+        <p>
+            Monday 7:00am - 4:00pm<br />
+            Tuesday	7:00am - 4:00pm<br />
+            Wednesday	7:00am - 4:00pm<br />
+            Thursday	7:00am - 4:00pm<br />
+            Friday	7:00am - 4:00pm<br />
+            Saturday	closed<br />
+            Sunday	closed<br />
+        </p>
+        <h2>Winter Hours</h2>
+        <p>
+            Monday	24/7<br />
+            Tuesday	24/7<br />
+            Wednesday	24/7<br />
+            Thursday	24/7<br />
+            Friday	24/7<br />
+            Saturday	24/7<br />
+            Sunday	24/7<br />
+        </p>
+    </div>
+
+    <h3>Select the type of material you'd like for the patio:</h3>
+    @Html.DropDownListFor(model => model.TypeOfMaterial, new List<SelectListItem>
+            {
+                new SelectListItem {Text="Sand Stone", Value="Sand Stone" },
+                new SelectListItem {Text="Cobblestone", Value="Cobblestone" },
+                new SelectListItem {Text="Outcroppings and Boulders", Value="Outcroppings and Boulders" },
+                new SelectListItem {Text="Red Brick", Value="Red Brick" },
+                new SelectListItem {Text="Gravel", Value="Gravel" },
+                new SelectListItem {Text="Flagstone", Value="Flagstone" }
+            }, "Select One")
+
+    <h3>Select the amount of material you'd like for the project (in yards):</h3>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.QuantityOfMaterial, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.QuantityOfMaterial, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.QuantityOfMaterial, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <h3>Please give us a brief description of the location where the patio will be going:</h3>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+}
+

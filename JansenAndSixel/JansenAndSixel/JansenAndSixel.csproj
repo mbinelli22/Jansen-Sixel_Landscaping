@@ -298,6 +298,14 @@
     <Compile Include="Migrations\201802151936132_deletedRequiredField.Designer.cs">
       <DependentUpon>201802151936132_deletedRequiredField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802152123492_addedEmailAndPhoneNumber.cs" />
+    <Compile Include="Migrations\201802152123492_addedEmailAndPhoneNumber.Designer.cs">
+      <DependentUpon>201802152123492_addedEmailAndPhoneNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802152132300_emailColon.cs" />
+    <Compile Include="Migrations\201802152132300_emailColon.Designer.cs">
+      <DependentUpon>201802152132300_emailColon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Appointment.cs" />
@@ -574,6 +582,9 @@
     <Content Include="Views\CustomProjects\CreateLandscapeProject.cshtml" />
     <Content Include="Views\CustomProjects\CreateHardscapeProject.cshtml" />
     <Content Include="Views\CustomProjects\Mulching.cshtml" />
+    <Content Include="Views\CustomProjects\TopSoilDelivery.cshtml" />
+    <Content Include="Views\CustomProjects\Patio.cshtml" />
+    <Content Include="Views\CustomProjects\Walls.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -622,6 +633,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802151936132_deletedRequiredField.resx">
       <DependentUpon>201802151936132_deletedRequiredField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802152123492_addedEmailAndPhoneNumber.resx">
+      <DependentUpon>201802152123492_addedEmailAndPhoneNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802152132300_emailColon.resx">
+      <DependentUpon>201802152132300_emailColon.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

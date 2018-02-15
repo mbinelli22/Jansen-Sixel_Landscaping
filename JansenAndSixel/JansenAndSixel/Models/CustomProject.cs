@@ -13,8 +13,14 @@ namespace JansenAndSixel.Models
 
         [Display(Name ="Your Name:")]
         public string Name { get; set; }
-
         
+        [Display(Name = "Phone Number:")]
+        public string PhoneNumber { get; set; }
+
+        [Display(Name ="Email:")]
+        [EmailAddress]
+        public string Email { get; set; }
+
         [Display(Name ="Type of Project:")]
         public string TypeOfProject { get; set; }
 
