@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "FinalCustomProject";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="jumbotron" style="background-color:lightyellow">
+        <h1>Custom Project</h1>
+        <p class="lead">Have a project in mind already? Put together all the pieces and let us do the dirty work!</p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Summer Hours</h2>
+        <p>
+            Monday	7:00am - 4:00pm<br />
+            Tuesday	7:00am - 4:00pm<br />
+            Wednesday	7:00am - 4:00pm<br />
+            Thursday	7:00am - 4:00pm<br />
+            Friday	7:00am - 4:00pm<br />
+            Saturday	closed<br />
+            Sunday	closed<br />
+        </p>
+        <h2>Spring/Fall Hours</h2>
+        <p>
+            Monday 7:00am - 4:00pm<br />
+            Tuesday	7:00am - 4:00pm<br />
+            Wednesday	7:00am - 4:00pm<br />
+            Thursday	7:00am - 4:00pm<br />
+            Friday	7:00am - 4:00pm<br />
+            Saturday	closed<br />
+            Sunday	closed<br />
+        </p>
+        <h2>Winter Hours</h2>
+        <p>
+            Monday	24/7<br />
+            Tuesday	24/7<br />
+            Wednesday	24/7<br />
+            Thursday	24/7<br />
+            Friday	24/7<br />
+            Saturday	24/7<br />
+            Sunday	24/7<br />
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <h3>Final Product:</h3>
+        @Html.TextBox("Name:", "Michael", new { @class = "form-control" })
+        <br />
+        @Html.TextBox("Email:", "mbinelli1996@gmail.com", new { @class = "form-control" })
+        <br />
+        @Html.TextBox("Phone Number:", "(920) 918-9265", new { @class = "form-control" })
+        <br />
+        @Html.TextBox("Type Of Project:", "Landscape", new { @class = "form-control" })
+        <br />
+        @Html.TextBox("Type Of Landscaping Project:", "Mulching", new { @class = "form-control" })
+        <br />
+        @Html.TextBox("Type Of Mulch:", "Red Dyed Mulch", new { @class = "form-control" })
+        <br />
+        @Html.TextBox("Quantity Of Mulch:", "2 yard(s)", new { @class = "form-control" })
+        <br />
+        @Html.TextBox("Location Of Project:", "Under Willow tree in front yard", new { @class = "form-control" })
+        <br />
+        
+
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Home" class="btn btn-default" href="../Home/Index" style="color:cornflowerblue" />
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="New Project" class="btn btn-default" href="../CustomProjects/Create" style="color:cornflowerblue" />
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save and Set up a Meeting" class="btn btn-default" href="../Home/Contact" style="color:cornflowerblue" />
+            </div>
+        </div>
+
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+}

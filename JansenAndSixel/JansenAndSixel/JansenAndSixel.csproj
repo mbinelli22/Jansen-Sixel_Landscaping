@@ -585,6 +585,7 @@
     <Content Include="Views\CustomProjects\TopSoilDelivery.cshtml" />
     <Content Include="Views\CustomProjects\Patio.cshtml" />
     <Content Include="Views\CustomProjects\Walls.cshtml" />
+    <Content Include="Views\CustomProjects\FinalCustomProject.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
