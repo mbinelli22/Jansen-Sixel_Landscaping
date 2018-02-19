@@ -79,7 +79,6 @@ namespace JansenAndSixel.Controllers
                     return RedirectToAction("Sent");
 
 
-
                     //return RedirectToAction("Index");
                 }
             }
