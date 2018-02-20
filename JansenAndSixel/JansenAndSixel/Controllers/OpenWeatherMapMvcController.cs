@@ -30,7 +30,7 @@ namespace JansenAndSixel.Controllers
             if(cities != null)
             {
                 string apiKey = "b2661afe52833e45399208a3218ee120";
-                HttpWebRequest apiRequest = WebRequest.Create("http://api.openweathermap.org/data/2.5/weather?id=" + cities + "&appid=" + apiKey + "&units=metric") as HttpWebRequest;
+                HttpWebRequest apiRequest = WebRequest.Create("http://api.openweathermap.org/data/2.5/weather?id=" + cities + "&appid=" + apiKey + "&units=imperial") as HttpWebRequest;
                 string apiResponse = "";
                 using (HttpWebResponse response = apiRequest.GetResponse() as HttpWebResponse)
                 {
@@ -71,7 +71,7 @@ namespace JansenAndSixel.Controllers
             openWeatherMap.cities.Add("Melbourne", "7839805");
             openWeatherMap.cities.Add("Auckland", "2193734");
             openWeatherMap.cities.Add("New Delhi", "1261481");
-            openWeatherMap.cities.Add("Abu Dhabi", "292968");
+            openWeatherMap.cities.Add("Milwuakee", "");
             openWeatherMap.cities.Add("Lahore", "1172451");
             return openWeatherMap;
         }

@@ -318,6 +318,10 @@
     <Compile Include="Migrations\201802192012366_OpenWeatherMapAPI.Designer.cs">
       <DependentUpon>201802192012366_OpenWeatherMapAPI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802192051007_ResponseWeather.cs" />
+    <Compile Include="Migrations\201802192051007_ResponseWeather.Designer.cs">
+      <DependentUpon>201802192051007_ResponseWeather.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Appointment.cs" />
@@ -658,6 +662,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802192012366_OpenWeatherMapAPI.resx">
       <DependentUpon>201802192012366_OpenWeatherMapAPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802192051007_ResponseWeather.resx">
+      <DependentUpon>201802192051007_ResponseWeather.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

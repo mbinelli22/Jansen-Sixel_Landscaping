@@ -269,6 +269,18 @@ namespace JansenAndSixel.Controllers
             return View();
         }
 
+        //post mulching
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Mulching([Bind(Include = "Id, TypeOfMaterial, QuantityOfMaterial, Location")] CustomProject customProject)
+        {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("FinalCustomProject");
+            }
+            return RedirectToAction("Mulching");
+        }
+
         public ActionResult TopSoilDelivery()
         {
             return View();

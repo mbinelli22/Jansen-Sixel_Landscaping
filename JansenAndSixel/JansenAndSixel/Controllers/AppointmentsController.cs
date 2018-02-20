@@ -9,6 +9,9 @@ using System.Web.Mvc;
 using JansenAndSixel.Models;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using System.IO;
+using JansenAndSixel.Class;
+using Newtonsoft.Json;
 
 namespace JansenAndSixel.Controllers
 {
@@ -50,6 +53,23 @@ namespace JansenAndSixel.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([Bind(Include = "Id,FirstName,LastName,Address,ZipCode,Date,Time,ProjectType")] Appointment appointment)
         {
+            AppointmentOpenWeatherMap appointmentWeather = new AppointmentOpenWeatherMap();
+            appointmentWeather.appointment = appointment;
+
+            string apiKey = "b2661afe52833e45399208a3218ee120";
+            //milwaukee hard code.
+            HttpWebRequest apiRequest = WebRequest.Create("http://api.openweathermap.org/data/2.5/weather?id=Milwaukee"  + "&appid=" + apiKey + "&units=imperial") as HttpWebRequest;
+            string apiResponse = "";
+            using (HttpWebResponse response = apiRequest.GetResponse() as HttpWebResponse)
+            {
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+                apiResponse = reader.ReadToEnd();
+            }
+
+            ResponseWeather rootObject = JsonConvert.DeserializeObject<ResponseWeather>(apiResponse);
+
+            appointmentWeather.responseWeather = rootObject;
+
             if (ModelState.IsValid)
             {
 
@@ -76,14 +96,17 @@ namespace JansenAndSixel.Controllers
                     smtp.Port = 587;
                     smtp.EnableSsl = true;
                     await smtp.SendMailAsync(message);
-                    return RedirectToAction("Sent");
 
+                    return View(appointmentWeather);
 
+                    // return RedirectToAction("Sent");
+
+                    
                     //return RedirectToAction("Index");
                 }
             }
 
-            return View(appointment);
+            return View(appointmentWeather);
         }
 
         // GET: Appointments/Edit/5
