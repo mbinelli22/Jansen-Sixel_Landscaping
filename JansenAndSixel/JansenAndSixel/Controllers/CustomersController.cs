@@ -263,5 +263,11 @@ namespace JansenAndSixel.Controllers
         {
             return View();
         }
+
+        //Message Board
+        public ActionResult MessageBoard()
+        {
+            return View();
+        }
     }
 }

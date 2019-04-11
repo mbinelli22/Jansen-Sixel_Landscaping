@@ -5,6 +5,7 @@ using Microsoft.Owin;
 using Owin;
 
 [assembly: OwinStartupAttribute(typeof(JansenAndSixel.Startup))]
+
 namespace JansenAndSixel
 {
     public partial class Startup
@@ -12,6 +13,7 @@ namespace JansenAndSixel
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            app.MapSignalR();
             //CreateRolesAndUsers();
         }
 

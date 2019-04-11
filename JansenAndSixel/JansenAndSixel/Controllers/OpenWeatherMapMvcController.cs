@@ -71,7 +71,7 @@ namespace JansenAndSixel.Controllers
             openWeatherMap.cities.Add("Melbourne", "7839805");
             openWeatherMap.cities.Add("Auckland", "2193734");
             openWeatherMap.cities.Add("New Delhi", "1261481");
-            openWeatherMap.cities.Add("Milwuakee", "");
+            openWeatherMap.cities.Add("Milwuakee", "840");
             openWeatherMap.cities.Add("Lahore", "1172451");
             return openWeatherMap;
         }

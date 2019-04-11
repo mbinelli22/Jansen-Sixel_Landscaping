@@ -3,23 +3,49 @@
 }
 <h2>Contact Details</h2>
 
-
-
-<div class="col-md-6">
+<div class="col-sm-4">
     <img src="~/Images/distanceMap.jpg" style="height:200px" width="400px" />
 
-<address>
-    2801 S 17th St<br />
-    Sheboygan, Wisconsin 53081<br />
-    <abbr title="Phone">P:</abbr>
-    920-457-8800
-</address>
+    <address>
+        2801 S 17th St<br />
+        Sheboygan, Wisconsin 53081<br />
+        <abbr title="Phone">P:</abbr>
+        920-457-8800
+    </address>
 
-<address>
-    <strong>Email:</strong>   <a href=" dt@jansensixellandscapingllc.com"> dt@jansensixellandscapingllc.com</a><br />
-</address>  
+    <address>
+        <strong>Email:</strong>   <a href=" dt@jansensixellandscapingllc.com"> dt@jansensixellandscapingllc.com</a><br />
+    </address>
 </div>
 
-<div class="col-md-6">
-    
+<div class="col-sm-8">
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>loadmapasyncHTML</title>
+        <style type='text/css'>
+            body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                font-family: 'Segoe UI',Helvetica,Arial,Sans-Serif;
+            }
+        </style>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=ApOyrg7h8b_YYPcfGF1oEEZpillo_GALPJ4naVPZBOCbXnzLAxLAl011nEhM6fNj'></script>
+        <script type='text/javascript'>
+                var map;
+                function loadMapScenario() {
+                    map = new Microsoft.Maps.Map(document.getElementById('myMap'), {});
+                }
+
+
+        </script>
+    </head>
+    <body onload='loadMapScenario();'>
+        <div id='printoutPanel'></div>
+
+        <div id='myMap' style='width: 50vw; height: 80vh;'></div>
+    </body>
+</html>
 </div>
